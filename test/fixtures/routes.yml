@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2015-04-14 22:15:21
+  end_date: 2015-04-14 22:15:21
+  from: MyString
+  to: MyString
+  length: 1
+  fuel_cost: 9.99
+  luggage: MyString
+  finished: false
+  accident: false
+  car_id: 
+  driver_id: 
+
+two:
+  start_date: 2015-04-14 22:15:21
+  end_date: 2015-04-14 22:15:21
+  from: MyString
+  to: MyString
+  length: 1
+  fuel_cost: 9.99
+  luggage: MyString
+  finished: false
+  accident: false
+  car_id: 
+  driver_id: 
