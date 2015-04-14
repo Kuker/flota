@@ -1,4 +1,5 @@
 ActiveAdmin.register Driver do
+  permit_params :name, :lastname, :pesel, :phone, :join_date, :category
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
