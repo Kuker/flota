@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @insurance.last %>
+</p>
+
+<p>
+  <strong>Future:</strong>
+  <%= @insurance.future %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @insurance.car %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_path(@insurance) %> |
+<%= link_to 'Back', insurances_path %>
