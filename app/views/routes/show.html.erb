@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @route.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @route.end_date %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @route.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @route.to %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @route.length %>
+</p>
+
+<p>
+  <strong>Fuel cost:</strong>
+  <%= @route.fuel_cost %>
+</p>
+
+<p>
+  <strong>Luggage:</strong>
+  <%= @route.luggage %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @route.finished %>
+</p>
+
+<p>
+  <strong>Accident:</strong>
+  <%= @route.accident %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @route.car %>
+</p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @route.driver %>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>
