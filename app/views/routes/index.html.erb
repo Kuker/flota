@@ -30,8 +30,8 @@
         <td><%= route.luggage %></td>
         <td><%= route.finished %></td>
         <td><%= route.accident %></td>
-        <td><%= route.car %></td>
-        <td><%= route.driver %></td>
+        <td><%= "#{route.car.brand} #{route.car.model} #{route.car.plate_no}" %></td>
+        <td><%= "#{route.driver.name} #{route.driver.lastname}" %></td>
         <td><%= link_to 'Show', route %></td>
         <td><%= link_to 'Edit', edit_route_path(route) %></td>
         <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
