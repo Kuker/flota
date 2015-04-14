@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last: 2015-04-14
+  future: 2015-04-14
+  car_id: 
+
+two:
+  last: 2015-04-14
+  future: 2015-04-14
+  car_id: 
