@@ -1,0 +1,22 @@
+<%= simple_form_for(@car) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :plate_no %>
+    <%= f.input :brand %>
+    <%= f.input :model %>
+    <%= f.input :production %>
+    <%= f.input :fuel_type %>
+    <%= f.input :color %>
+    <%= f.input :fuel_consumption %>
+    <%= f.input :capacity %>
+    <%= f.input :availability %>
+    <%= f.input :category %>
+    <%= f.input :mileage %>
+    <%= f.input :damaged %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

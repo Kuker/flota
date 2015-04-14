@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plate no:</strong>
+  <%= @car.plate_no %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @car.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>Production:</strong>
+  <%= @car.production %>
+</p>
+
+<p>
+  <strong>Fuel type:</strong>
+  <%= @car.fuel_type %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @car.color %>
+</p>
+
+<p>
+  <strong>Fuel consumption:</strong>
+  <%= @car.fuel_consumption %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @car.capacity %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @car.availability %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @car.category %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @car.mileage %>
+</p>
+
+<p>
+  <strong>Damaged:</strong>
+  <%= @car.damaged %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
