@@ -3,6 +3,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def create
     super
+  #  $user = User.find(:id)
   end
 
   def new

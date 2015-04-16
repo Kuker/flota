@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 4a1c68a397a35e95814a742d894eb7f0c8d47286
+  revision: 7624737254d15ac3fc6403e59bf7269953d0fb68
   specs:
     activeadmin (1.0.0.pre1)
       arbre (~> 1.0, >= 1.0.2)
@@ -161,6 +161,7 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rolify (4.0.0)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -219,6 +220,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   rails (= 4.1.4)
+  rolify
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form

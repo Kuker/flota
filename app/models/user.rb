@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :trackable, :validatable
-  attr_accessor :login
+  attr_accessor :email
   
   #->Prelang (user_login:devise/username_login_support)
   def self.find_first_by_auth_conditions(warden_conditions)
@@ -16,5 +17,5 @@ class User < ActiveRecord::Base
   end
 
 
-  devise authentication_keys: [:login]
+  devise authentication_keys: [:email]
 end

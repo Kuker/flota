@@ -35,8 +35,9 @@
         <td><%= car.mileage %></td>
         <td><%= car.damaged %></td>
         <td><%= link_to 'Show', car %></td>
+        <%- if current_user.has_role? :admin %>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
-
+            <% end -%>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -46,4 +47,4 @@
 <br>
 
 <%= link_to 'New Car', new_car_path %>
-<%= link_to 'Back', :back %>
+<%= link_to 'Back', landings_index_path %>
