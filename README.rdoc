@@ -1,28 +1,15 @@
 == README
+* Baza danych znajduje się tu: db/development.sqlite3. Jest zrobiona na szybko
+* Relacje między bazami są w katalogu app/models/*.rb
+* Pliki ze stylami css są w katalogu app/assets/stylesheets. Linkować je mozna w pliku app/views/layouts/application.html.erb
+  Wystarczy dodać linijke  <%= stylesheet_link_tag    'nazwa_stylu', media: 'all', 'data-turbolinks-track' => true %> .
+* Widoki to są pliki *.html.erb, są w katalogu app/views/*/ . Są to pliki w których jest czysty html pomieszany z rubym.
+    Kod ruby jest opisany między takimi znacznikami: <% lub <%= i %>.
+      <% jest to kod niewidoczny w przeglądarce
+      <%= to kod widoczny
+* Żeby zobaczyć jak to wygląda musicie miec ruby zainstalowane, potem ruby on rails a na koniec sqlite3 jeszcze.
+    Na necie są tutoriale jak to wszystko zainstalować.
+    
+* NAJWAŻNIEJSZE: Przed wysłaniem commita sprawdzić czy wszystko działa tak jak trzeba, żeby potem nie było że wszystko padło.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
