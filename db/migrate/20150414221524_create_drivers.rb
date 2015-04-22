@@ -3,8 +3,8 @@ class CreateDrivers < ActiveRecord::Migration
     create_table :drivers do |t|
       t.string :name
       t.string :lastname
-      t.integer :pesel
-      t.integer :phone
+      t.decimal :pesel, precision: 11
+      t.decimal :phone, precision: 9
       t.date :join_date
       t.string :category
 
