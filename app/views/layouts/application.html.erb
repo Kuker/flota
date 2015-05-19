@@ -3,22 +3,23 @@
 <head>
   <title>Flotav13</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= yield %>
-<p class="navbar-text pull-right">
+<%= nav_bar fixed: :top do %>
+
   <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <%= link_to 'Edytuj profil', edit_user_registration_path %> |
+      <%= link_to "Wyloguj", destroy_user_session_path, method: :delete%>
   <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <%= link_to "Zarejestruj", new_user_registration_path %> |
+      <%= link_to "Zaloguj", new_user_session_path  %>
   <% end %>
-
+<% end %>
+<%= yield %>
 </body>
 </html>

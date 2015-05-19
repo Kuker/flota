@@ -1,0 +1,44 @@
+<% if !@routes.present? %>
+    <h1>Brak tras</h1>
+    <% else %>
+<h1>Listing routes</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Length</th>
+    <th>Fuel cost</th>
+    <th>Luggage</th>
+    <th>Finished</th>
+    <th>Accident</th>
+    <th>Car</th>
+    <th>Driver</th>
+
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @routes.each do |route| %>
+      <tr>
+        <td><%= route.start_date %></td>
+        <td><%= route.end_date %></td>
+        <td><%= route.from %></td>
+        <td><%= route.to %></td>
+        <td><%= route.length %></td>
+        <td><%= route.fuel_cost %></td>
+        <td><%= route.luggage %></td>
+        <td><%= route.finished %></td>
+        <td><%= route.accident %></td>
+        <td><%= "#{route.car.brand} #{route.car.model} #{route.car.plate_no}" %></td>
+        <td><%= "#{route.driver.name} #{route.driver.lastname}" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
+<br>
+<%= link_to 'Back', driver_path %>

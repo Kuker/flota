@@ -1,22 +1,30 @@
-<%= simple_form_for(@car) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for @car, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :plate_no %>
+  <%= error_span(@car[:plate_no]) %>
+  <%= f.input :brand %>
+  <%= error_span(@car[:brand]) %>
+  <%= f.input :model %>
+  <%= error_span(@car[:model]) %>
+  <%= f.input :production %>
+  <%= error_span(@car[:production]) %>
+  <%= f.input :fuel_type %>
+  <%= error_span(@car[:fuel_type]) %>
+  <%= f.input :color %>
+  <%= error_span(@car[:color]) %>
+  <%= f.input :fuel_consumption %>
+  <%= error_span(@car[:fuel_consumption]) %>
+  <%= f.input :capacity %>
+  <%= error_span(@car[:capacity]) %>
+  <%= f.input :availability %>
+  <%= error_span(@car[:availability]) %>
+  <%= f.input :category %>
+  <%= error_span(@car[:category]) %>
+  <%= f.input :mileage %>
+  <%= error_span(@car[:mileage]) %>
+  <%= f.input :damaged %>
+  <%= error_span(@car[:damaged]) %>
 
-  <div class="form-inputs">
-    <%= f.input :plate_no %>
-    <%= f.input :brand %>
-    <%= f.input :model %>
-    <%= f.input :production %>
-    <%= f.input :fuel_type %>
-    <%= f.input :color %>
-    <%= f.input :fuel_consumption %>
-    <%= f.input :capacity %>
-    <%= f.input :availability %>
-    <%= f.input :category %>
-    <%= f.input :mileage %>
-    <%= f.input :damaged %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cars_path, :class => 'btn btn-default' %>
 <% end %>

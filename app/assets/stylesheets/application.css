@@ -12,14 +12,13 @@
 *
 *= require_tree .
 *= stub active_admin
-
 *= require_self
 */
 /* ----- SimpleForm Styles ----- */
 
 .simple_form div.input {
     margin-bottom: 10px;
-    clear: both;
+    clear: both; /* Required for Webkit, but not for Gecko */
 }
 
 .simple_form label {
@@ -79,32 +78,86 @@ label.collection_check_boxes {
     vertical-align: -2px;
     margin-left: 2px;
 }
+
 table {
     font-family: verdana,arial,sans-serif;
     font-size:11px;
     color:#333333;
     border-width: 1px;
-    border-color: #999999;
+    border-color: #666666;
     border-collapse: collapse;
 }
 table th {
-    background-color:#c3dde0;
     border-width: 1px;
     padding: 8px;
     border-style: solid;
-    border-color: #a9c6c9;
-}
-table tr {
-    background-color:#d4e3e5;
+    border-color: #666666;
+    background-color: #dedede;
 }
 table td {
     border-width: 1px;
     padding: 8px;
     border-style: solid;
-    border-color: #a9c6c9;
+    border-color: #666666;
+    background-color: #ffffff;
 }
-body {
-    background-image: url("taylor.jpg");
-    background-size: cover;
-    color: white;
+
+.navbar-default {
+    background-color: #d0d0d0;
+    border-color: #000000;
+}
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #7800ff;
+}
+.navbar-default .navbar-text {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #7800ff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #7800ff;
+    background-color: #000000;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #7800ff;
+    background-color: #000000;
+}
+.navbar-default .navbar-toggle {
+    border-color: #000000;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #000000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+    color: #7800ff;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #7800ff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #7800ff;
+        background-color: #000000;
+    }
 }

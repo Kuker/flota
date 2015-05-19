@@ -29,6 +29,6 @@
   <strong>Category:</strong>
   <%= @driver.category %>
 </p>
-
+<%= link_to 'Show routes', driver_route_path_path(@driver) %> |
 <%= link_to 'Edit', edit_driver_path(@driver) %> |
 <%= link_to 'Back', drivers_path %>

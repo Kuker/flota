@@ -1,64 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Car -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Plate no:</strong>
-  <%= @car.plate_no %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:plate_no) %>:</strong></dt>
+  <dd><%= @car.plate_no %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:brand) %>:</strong></dt>
+  <dd><%= @car.brand %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:model) %>:</strong></dt>
+  <dd><%= @car.model %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:production) %>:</strong></dt>
+  <dd><%= @car.production %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fuel_type) %>:</strong></dt>
+  <dd><%= @car.fuel_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:color) %>:</strong></dt>
+  <dd><%= @car.color %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fuel_consumption) %>:</strong></dt>
+  <dd><%= @car.fuel_consumption %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:capacity) %>:</strong></dt>
+  <dd><%= @car.capacity %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:availability) %>:</strong></dt>
+  <dd><%= @car.availability %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category) %>:</strong></dt>
+  <dd><%= @car.category %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mileage) %>:</strong></dt>
+  <dd><%= @car.mileage %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:damaged) %>:</strong></dt>
+  <dd><%= @car.damaged %></dd>
+</dl>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @car.brand %>
-</p>
-
-<p>
-  <strong>Model:</strong>
-  <%= @car.model %>
-</p>
-
-<p>
-  <strong>Production:</strong>
-  <%= @car.production %>
-</p>
-
-<p>
-  <strong>Fuel type:</strong>
-  <%= @car.fuel_type %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @car.color %>
-</p>
-
-<p>
-  <strong>Fuel consumption:</strong>
-  <%= @car.fuel_consumption %>
-</p>
-
-<p>
-  <strong>Capacity:</strong>
-  <%= @car.capacity %>
-</p>
-
-<p>
-  <strong>Availability:</strong>
-  <%= @car.availability %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @car.category %>
-</p>
-
-<p>
-  <strong>Mileage:</strong>
-  <%= @car.mileage %>
-</p>
-
-<p>
-  <strong>Damaged:</strong>
-  <%= @car.damaged %>
-</p>
-
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              cars_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_car_path(@car), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              car_path(@car),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

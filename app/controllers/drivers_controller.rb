@@ -21,6 +21,12 @@ class DriversController < ApplicationController
   def edit
   end
 
+  def routes
+
+  @routes = Route.where(driver_id: params[:id])
+
+  end
+
   # POST /drivers
   # POST /drivers.json
   def create
