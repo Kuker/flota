@@ -1,0 +1,168 @@
+/* line 4, C:/Users/Radomir/Desktop/Projekt BD/flotav13.1/app/assets/stylesheets/landings.css.scss */
+a {
+  color: burlywood;
+}
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+
+
+
+*/
+/* ----- SimpleForm Styles ----- */
+
+
+.simple_form div.input {
+    margin-bottom: 10px;
+    clear: both; /* Required for Webkit, but not for Gecko */
+}
+
+.simple_form label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    margin: 2px 10px;
+}
+
+div.boolean, .simple_form input[type='submit'] {
+    margin-left: 120px;
+}
+
+div.boolean label, label.collection_radio_buttons {
+    float: none;
+    margin: 0;
+}
+
+label.collection_radio_buttons {
+    margin-right: 10px;
+    vertical-align: -2px;
+    margin-left: 2px;
+}
+
+.field_with_errors {
+    background-color: #ff3333;
+}
+
+.simple_form .error {
+    clear: left;
+    color: black;
+    display: block;
+    margin-left: 120px;
+}
+
+.simple_form .hint {
+    clear: left;
+    margin-left: 120px;
+    color: #555;
+    display: block;
+    font-style: italic;
+}
+
+input.radio {
+    margin-right: 5px;
+    vertical-align: -3px;
+}
+
+input.check_boxes {
+    margin-left: 3px;
+    vertical-align: -3px;
+}
+
+label.collection_check_boxes {
+    float: none;
+    margin: 0;
+    vertical-align: -2px;
+    margin-left: 2px;
+}
+
+table {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+.navbar-default {
+    background-color: #d0d0d0;
+    border-color: #000000;
+}
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #7800ff;
+}
+.navbar-default .navbar-text {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #7800ff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #7800ff;
+    background-color: #000000;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #7800ff;
+    background-color: #000000;
+}
+.navbar-default .navbar-toggle {
+    border-color: #000000;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #000000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+    color: #7800ff;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #7800ff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #7800ff;
+        background-color: #000000;
+    }
+}
