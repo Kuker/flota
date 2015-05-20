@@ -2,17 +2,17 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :from %>
-    <%= f.input :to %>
-    <%= f.input :length %>
-    <%= f.input :fuel_cost %>
-    <%= f.input :luggage %>
+    <%= f.input :start_date, required: true %>
+    <%= f.input :end_date, required: true  %>
+    <%= f.input :from, required: true   %>
+    <%= f.input :to, required: true   %>
+    <%= f.input :length, required: true   %>
+    <%= f.input :fuel_cost, required: true   %>
+    <%= f.input :luggage, required: true   %>
     <%= f.input :finished %>
     <%= f.input :accident %>
-    <%= f.association :car %>
-    <%= f.association :driver %>
+    <%= f.association :car, label_method: lambda {|c| "#{c.brand} | #{c.model} | #{c.plate_no}"} ,required: true   %>
+    <%= f.association :driver, required: true   %>
   </div>
 
   <div class="form-actions">
