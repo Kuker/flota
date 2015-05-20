@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'landings/index'
   get 'drivers/:id/routes' => 'drivers#routes', as: :driver_route_path
+  get 'drivers/:id/cars' => 'drivers#cars', as: :driver_car_path
   resources :cars
 
   resources :drivers

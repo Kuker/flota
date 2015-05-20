@@ -10,6 +10,7 @@ class DriversController < ApplicationController
   # GET /drivers/1
   # GET /drivers/1.json
   def show
+
   end
 
   # GET /drivers/new
@@ -22,9 +23,18 @@ class DriversController < ApplicationController
   end
 
   def routes
-
+    @driver = Driver.find(params[:id])
   @routes = Route.where(driver_id: params[:id])
 
+  end
+
+  def cars
+    @driver = Driver.find(params[:id])
+    @routes = Route.where(driver_id: params[:id])
+    @cars = []
+    @routes.each do |r|
+      @cars.push Car.where(id: r.car_id)
+    end
   end
 
   # POST /drivers
