@@ -1,30 +1,30 @@
 <%= simple_form_for @car, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :plate_no %>
+  <%= f.input :plate_no, label: "Numer rejestracyjny" %>
   <%= error_span(@car[:plate_no]) %>
-  <%= f.input :brand %>
+  <%= f.input :brand, label: "Marka" %>
   <%= error_span(@car[:brand]) %>
-  <%= f.input :model %>
+  <%= f.input :model, label: "Model" %>
   <%= error_span(@car[:model]) %>
-  <%= f.input :production %>
+  <%= f.input :production, label: "Rok produkcji" %>
   <%= error_span(@car[:production]) %>
-  <%= f.input :fuel_type %>
+  <%= f.input :fuel_type, label: "Typ paliwa" %>
   <%= error_span(@car[:fuel_type]) %>
-  <%= f.input :color %>
+  <%= f.input :color, label: "Kolor" %>
   <%= error_span(@car[:color]) %>
-  <%= f.input :fuel_consumption %>
+  <%= f.input :fuel_consumption, label: "Spalanie" %>
   <%= error_span(@car[:fuel_consumption]) %>
-  <%= f.input :capacity %>
+  <%= f.input :capacity, label: "Pojemnosc" %>
   <%= error_span(@car[:capacity]) %>
-  <%= f.input :availability %>
+  <%= f.input :availability, input_html: {checked: true}, label: "Dostepnosc" %>
   <%= error_span(@car[:availability]) %>
-  <%= f.input :category %>
+  <%= f.input :category, label: "Wymagane uprawnienia" %>
   <%= error_span(@car[:category]) %>
-  <%= f.input :mileage %>
+  <%= f.input :mileage, label: "Przebieg" %>
   <%= error_span(@car[:mileage]) %>
-  <%= f.input :damaged %>
+  <%= f.input :damaged, label: "Uszkodzony" %>
   <%= error_span(@car[:damaged]) %>
 
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+  <%= f.button :submit, "Dodaj", :class => 'btn-primary' %>
+  <%= link_to t('Anuluj', :default => t("helpers.links.cancel")),
                 cars_path, :class => 'btn btn-default' %>
 <% end %>

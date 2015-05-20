@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Imie:</strong>
   <%= @driver.name %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Nazwisko:</strong>
   <%= @driver.lastname %>
 </p>
 
@@ -16,20 +16,20 @@
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Telefon:</strong>
   <%= @driver.phone %>
 </p>
 
 <p>
-  <strong>Join date:</strong>
+  <strong>Data dolaczenia:</strong>
   <%= @driver.join_date %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Uprawnienia:</strong>
   <%= @driver.category %>
 </p>
-<%= link_to 'Show routes', driver_route_path_path(@driver) %> |
-<%= link_to 'Show cars', driver_car_path_path(@driver) %> |
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>
+<%= link_to 'Pokaz trasy', driver_route_path_path(@driver) %> |
+<%= link_to 'Pokaz pojazdy', driver_car_path_path(@driver) %> |
+<%= link_to 'Edytuj', edit_driver_path(@driver) %> |
+<%= link_to 'Wstecz', drivers_path %>

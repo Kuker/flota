@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flotav13</title>
+  <title>Flota majster</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,7 @@
 
   <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Strona glowna', landings_index_path %> |
       <%= link_to 'Edytuj profil', edit_user_registration_path %> |
       <%= link_to "Wyloguj", destroy_user_session_path, method: :delete%>
   <% else %>

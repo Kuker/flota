@@ -2,20 +2,20 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :start_date, required: true %>
-    <%= f.input :end_date, required: true  %>
-    <%= f.input :from, required: true   %>
-    <%= f.input :to, required: true   %>
-    <%= f.input :length, required: true   %>
-    <%= f.input :fuel_cost, required: true   %>
-    <%= f.input :luggage, required: true   %>
-    <%= f.input :finished %>
-    <%= f.input :accident %>
-    <%= f.association :car, label_method: lambda {|c| "#{c.brand} | #{c.model} | #{c.plate_no}"} ,required: true   %>
-    <%= f.association :driver, required: true   %>
+    <%= f.input :start_date, label: "Data wyjazdu", required: true %>
+    <%= f.input :end_date, label: "Szacowana data dojazdu", required: true  %>
+    <%= f.input :from, label: "Z", required: true   %>
+    <%= f.input :to, label: "Do", required: true   %>
+    <%= f.input :length, required: true, label: "Dlugosc"   %>
+    <%= f.input :fuel_cost, required: true , label: "Szacowany koszt paliwa"  %>
+    <%= f.input :luggage, required: true  , label: "Bagaz" %>
+    <%= f.input :finished, label: "Zakonczona?" %>
+    <%= f.input :accident, label: "Awaria/Wypadek?" %>
+    <%= f.association :car, collection: Car.order('brand ASC'), label_method: lambda {|c| "#{c.brand} | #{c.model} | #{c.plate_no}"} ,required: true, label: "Pojazd"   %>
+    <%= f.association :driver,collection: Driver.order('lastname ASC'), label_method: lambda {|d| "#{d.name} #{d.lastname}"}, required: true , label: "Kierowca"  %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Dodaj" %>
   </div>
 <% end %>
