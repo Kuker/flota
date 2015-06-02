@@ -26,9 +26,14 @@
         <td><%= route.from %></td>
         <td><%= route.to %></td>
         <td><%= route.length %></td>
-        <td><%= route.length*route.car.fuel_consumption*0.01*5 %></td>
+        <td><%= route.fuel_cost=route.length*route.car.fuel_consumption*0.01*5 %></td>
         <td><%= route.luggage %></td>
-        <td><%= route.finished %></td>
+        <td><% if route.end_date < DateTime.now %>
+              Tak <% route.finished = true %>
+              <% else %>
+                Nie <% route.finished = false %>
+              <% end %>
+              </td>
         <td><%= route.accident %></td>
         <td><%= "#{route.car.brand} #{route.car.model} #{route.car.plate_no}" %></td>
         <td><%= "#{route.driver.name} #{route.driver.lastname}" %></td>

@@ -1,58 +1,62 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Start date:</strong>
+  <strong>Data startu:</strong>
   <%= @route.start_date %>
 </p>
 
 <p>
-  <strong>End date:</strong>
+  <strong>Szacowana data zakonczenia:</strong>
   <%= @route.end_date %>
 </p>
 
 <p>
-  <strong>From:</strong>
+  <strong>Z:</strong>
   <%= @route.from %>
 </p>
 
 <p>
-  <strong>To:</strong>
+  <strong>Do:</strong>
   <%= @route.to %>
 </p>
 
 <p>
-  <strong>Length:</strong>
+  <strong>Dlugosc:</strong>
   <%= @route.length %>
 </p>
 
 <p>
-  <strong>Fuel cost:</strong>
-  <%= @route.fuel_cost %>
+  <strong>Koszt paliwa:</strong>
+  <%= @route.fuel_cost=@route.length*@route.car.fuel_consumption*0.01*5 %>
 </p>
 
 <p>
-  <strong>Luggage:</strong>
+  <strong>Bagaz:</strong>
   <%= @route.luggage %>
 </p>
 
 <p>
-  <strong>Finished:</strong>
-  <%= @route.finished %>
+  <strong>Zakonczona:</strong>
+  <% if @route.finished %>
+  Tak
+      <% else %>
+  Nie
+      <% end %>
 </p>
 
 <p>
-  <strong>Accident:</strong>
+  <strong>Awaria:</strong>
   <%= @route.accident %>
 </p>
 
 <p>
-  <strong>Car:</strong>
-  <%= @route.car %>
+  <strong>Samochod:</strong>
+  <%= "#{@route.car.brand} #{@route.car.model} #{@route.car.plate_no}" %>
 </p>
 
 <p>
-  <strong>Driver:</strong>
-  <%= @route.driver %>
+  <strong>Kierowca:</strong>
+  <%= "#{@route.driver.name} #{@route.driver.lastname}" %>
 </p>
 
 <%= link_to 'Edit', edit_route_path(@route) %> |

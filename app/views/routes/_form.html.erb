@@ -9,10 +9,9 @@
     <%= f.input :length, required: true, label: "Dlugosc"   %>
     <%= f.input :fuel_cost , label: "Szacowany koszt paliwa", disabled: true  %>
     <%= f.input :luggage, required: true  , label: "Bagaz" %>
-    <%= f.input :finished, label: "Zakonczona?" %>
     <%= f.input :accident, label: "Awaria/Wypadek?" %>
-    <%= f.association :car, collection: Car.order('brand ASC'), label_method: lambda {|c| "#{c.brand} | #{c.model} | #{c.plate_no}"} ,required: true, label: "Pojazd"   %>
-    <%= f.association :driver,collection: Driver.order('lastname ASC'), label_method: lambda {|d| "#{d.name} #{d.lastname}"}, required: true , label: "Kierowca"  %>
+    <%= f.association :car, collection: Car.order('brand ASC').where(availability: true), label_method: lambda {|c| "#{c.brand} | #{c.model} | #{c.plate_no}"} ,required: true, label: "Pojazd"   %>
+    <%= f.association :driver,collection: Driver.order('lastname ASC').where(availability: true), label_method: lambda {|d| "#{d.name} #{d.lastname}"}, required: true , label: "Kierowca"  %>
   </div>
 
   <div class="form-actions">
