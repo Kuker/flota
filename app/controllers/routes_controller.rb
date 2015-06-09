@@ -4,9 +4,23 @@ class RoutesController < ApplicationController
   # GET /routes
   # GET /routes.json
   def index
-    @routes = Route.all
+    if params[:search]
+    @routes = Route.search(params[:search]).order("start_date ASC")
+    else
+      @routes = Route.order("start_date ASC")
+      end
   end
+def awaria
+  @route = Route.find(params[:id])
+  if @route.accident == false
+  @route.accident = true
+  else
+    @route.accident = false
+  end
+  @route.save
 
+  redirect_to routes_path
+end
   # GET /routes/1
   # GET /routes/1.json
   def show
@@ -23,6 +37,9 @@ class RoutesController < ApplicationController
 
   # POST /routes
   # POST /routes.json
+  def search
+    @routes = Route.search(params[:search])
+  end
   def create
     @route = Route.new(route_params)
 

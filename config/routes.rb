@@ -6,7 +6,12 @@ Rails.application.routes.draw do
 
   resources :drivers
 
-  resources :routes
+  resources :routes do
+
+    member do
+      get :awaria
+    end
+  end
 
   resources :inspections
 
