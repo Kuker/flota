@@ -12,7 +12,7 @@
 <%= nav_bar fixed: :top do %>
 
   <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
+      Zalogowany jako <strong><%= current_user.email %></strong>.
         <%= link_to 'Strona glowna', landings_index_path %> |
       <%= link_to 'Edytuj profil', edit_user_registration_path %> |
       <%= link_to "Wyloguj", destroy_user_session_path, method: :delete%>
