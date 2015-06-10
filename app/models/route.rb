@@ -4,7 +4,7 @@ class Route < ActiveRecord::Base
   belongs_to :driver
   def self.search(query)
     # where(:title, query) -> This would return an exact match of the query
-    where("routes.from like ?", "#{query}")
+    where("LOWER(routes.from) like ?", "#{query}".downcase)
   end
 
 
