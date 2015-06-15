@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Last:</strong>
+  <strong>Ostatnie:</strong>
   <%= @insurance.last %>
 </p>
 
 <p>
-  <strong>Future:</strong>
+  <strong>Przyszle:</strong>
   <%= @insurance.future %>
 </p>
 
 <p>
-  <strong>Car:</strong>
-  <%= @insurance.car %>
+  <strong>Samochod:</strong>
+  <%= "#{@insurance.car.brand} #{@insurance.car.model}" %>
 </p>
 
-<%= link_to 'Edit', edit_insurance_path(@insurance) %> |
-<%= link_to 'Back', insurances_path %>
+<%= link_to 'Edytuj', edit_insurance_path(@insurance) %> |
+<%= link_to 'Wroc', insurances_path %>

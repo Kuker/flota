@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails flotav13.1: development" uuid="920deefd-04ca-41f0-a4d8-1bc98d42e82b">
+      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfd8dfc5dfc0dfcfdfc1dfdedfccdfc6dfc5dfdedfcb</user-password>
+    </data-source>
+    <data-source name="Rails flotav13.1: test" uuid="e08552e9-49d5-4991-81fd-a46987e97827">
+      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+      <user-password>dfdadfd8dfc5dfc0dfcfdfc1dfdedfccdfc6dfc5dfdedfcb</user-password>
+    </data-source>
+    <data-source name="Rails flotav13.1: production" uuid="80206c64-c171-468b-857b-865acfc8748f">
+      <first-sync>true</first-sync>
+      <user-name>flotav13</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfecdfe6dfe5dffedfebdffcdf9bdf99dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>
